@@ -1,9 +1,8 @@
 import '../Styles/App.css';
+import { useCallback, useState } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import OtherPage from './OtherPage';
-import MainComponent from '../Components/MainComponent';
-import { Fragment } from 'react';
 import styled from 'styled-components'
+import axios from 'axios';
 
 // Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h1`
@@ -26,22 +25,44 @@ const PageBackground = styled.section`
 const Emoji = styled.section`
   font-size: 4em;
   text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+`;
+
+const Announcement = styled.h2`
+  font-size: 1.5em;
+  text-align: center;
+  color: #0c0c0c;
+  padding-top: 1em;
+  padding-bottom: 1em;
 `;
 
 function App() {
+  const [bars, setBars] = useState('')
+
+  const getAllBars = useCallback(async () => {
+    // we will use nginx to redirect it to the proper URL
+    const allBars = await axios.get("/api/");
+    // setBars(allBars.data.rows.map(row => row.number))
+    console.log(allBars)
+  }, []);
+
   return (
-    <PageBackground>
     <Router>
+    <PageBackground>
       <Wrapper>
         <Title>
           Chocolate Insights
         </Title>
-        <Emoji>
-          🍫
-        </Emoji>
       </Wrapper>
-    </Router>
+      <Emoji onClick={getAllBars}>
+          🍫
+      </Emoji>
+      <Announcement>
+        Chocolate Analytics Coming Soon!
+      </Announcement>
     </PageBackground>
+    </Router>
   );
 }
 

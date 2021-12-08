@@ -19,11 +19,11 @@ const pgClient = new Pool({
   port: keys.pgPort
 });
 
-pgClient.on("connect", client => {
-  client
-    .query("CREATE TABLE IF NOT EXISTS values (number INT)")
-    .catch(err => console.log("PG ERROR", err));
-});
+// pgClient.on("connect", client => {
+//   client
+//     .query("CREATE TABLE IF NOT EXISTS values (number INT)")
+//     .catch(err => console.log("PG ERROR", err));
+// });
 
 //Express route definitions
 app.get("/", (req, res) => {
@@ -49,3 +49,14 @@ app.post("/values", async (req, res) => {
 app.listen(5000, err => {
   console.log("Listening");
 });
+
+app.get("/bars/all", async (req, res) => {
+  try {
+    const bars = await pgClient.query('SELECT 1');
+  
+    // res.send(bars)
+  } catch (error) {
+    console.log(error)
+    process.exit(1)
+  }
+})
