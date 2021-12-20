@@ -52,11 +52,11 @@ app.listen(5000, err => {
 
 app.get("/bars/all", async (req, res) => {
   try {
-    const bars = await pgClient.query('SELECT 1');
+    const bars = await pgClient.query('SELECT * from bars');
   
     // res.send(bars)
   } catch (error) {
     console.log(error)
-    process.exit(1)
+    // process.exit(1)
   }
 })
