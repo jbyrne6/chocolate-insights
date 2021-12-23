@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 // Postgres client setup
 const { Pool } = require("pg");
+const { response } = require("express");
 const pgClient = new Pool({
   user: keys.pgUser,
   host: keys.pgHost,
@@ -50,13 +51,22 @@ app.listen(5000, err => {
   console.log("Listening");
 });
 
+// // get the values
+// app.get("/bars/all", async (req, res) => {
+//   pgClient.query('SELECT * FROM bars ORDER BY id ASC', (error, results) => {
+//     if (error) {
+//       throw error
+//     }
+//     response.status(200).json(results.rows)
+//   })
+// });
+
 app.get("/bars/all", async (req, res) => {
-  try {
-    const bars = await pgClient.query('SELECT * from bars');
-  
-    // res.send(bars)
-  } catch (error) {
-    console.log(error)
-    // process.exit(1)
-  }
+  pgClient.query('SELECT * FROM chocolate_insights_schema.bars;',
+    (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
 })
