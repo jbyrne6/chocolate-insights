@@ -1,0 +1,16 @@
+.chocolate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .chocolate-list li {
+    padding-left: 1rem;
+    text-indent: -0.75rem;
+  }
+
+  .chocolate-list li::before {
+    content: "🍫 ";
+  }
+
+  html {background-color: #FFE2C1}
