@@ -51,11 +51,32 @@ const Section = styled.div`
   margin-bottom: 35px;
 `
 
-const SectionHeader = styled.h2`
+const MainTitleSection = styled.div`
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+`
+
+const SectionHeader = styled.h3`
   color: #000000;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
+`;
+
+const MainWebsiteHeading = styled.h1`
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+const WebsiteSubheading = styled.h4`
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
 `;
 
 const SectionContents = styled.p`
@@ -88,7 +109,7 @@ function Homepage() {
       <MDBNavbar expand='lg' sticky light className="sticky-top">
         <MDBContainer fluid>
           <MDBNavbarBrand href='#'>
-            <MDBTypography tag='div' className='display-5'>
+            <MDBTypography tag='div' className='display-6'>
               Chocolate Insights
             </MDBTypography>
           </MDBNavbarBrand>
@@ -128,14 +149,13 @@ function Homepage() {
         </MDBContainer>
       </MDBNavbar>
       </NavbarBackground>
-      <Section>
-        <SectionHeader>Welcome to Chocolate Insights!</SectionHeader>
-        <SectionContents>
-          In the works is a service allowing chocolate makers and sellers to pull back the curtain of the <b>bean to bar process</b> for all chocolate enthusiasts.
-          Learn below what we are about:
-        </SectionContents>
-      </Section>
-
+      <MainTitleSection>
+        <MainWebsiteHeading>Welcome to Chocolate Insights!</MainWebsiteHeading>
+        <WebsiteSubheading>
+          Currently under development, <b><i>Chocolate Insights</i></b> will be a service to help pull back the curtain of the <b><i> craft chocolate bean to bar process</i></b> for all chocolate lovers.
+          Learn what we are about below.
+        </WebsiteSubheading>
+      </MainTitleSection>
       <Section id="who">
         <SectionHeader>
           Who
@@ -190,12 +210,12 @@ function Homepage() {
               </MDBCardHeader>
             {/* </SectionContents> */}
             <SectionContents>
-              <ol class="">
+              <ol>
                 <CustomListItem><b>Find</b> your bar in the Chocolate Insights Database</CustomListItem>
-                <CustomListItem><b>Customize</b> your visualization</CustomListItem>
+                <CustomListItem><b>Customize</b> your bean to bar visualization</CustomListItem>
                 <CustomListItem><b>Receive</b> the QR code associated with your visual</CustomListItem>
-                <CustomListItem><b>Print</b> out the QR code and <b>put</b> it near your bar</CustomListItem>
-                <CustomListItem><b>Watch</b> as your customers' chocolate knowledge, and sales, increase!</CustomListItem>
+                <CustomListItem><b>Print</b> out the QR code and <b>put</b> it near your bar in store</CustomListItem>
+                <CustomListItem><b>Watch</b> as your customers' chocolate knowledge, and sales, <b>increase</b>!</CustomListItem>
               </ol>
             </SectionContents>
           </MDBCardBody>
