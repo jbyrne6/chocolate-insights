@@ -13,4 +13,23 @@
     content: "🍫 ";
   }
 
-  html {background-color: #FFE2C1}
+  .chocolate-list li::after {
+    content: " 🍫";
+  }
+
+  html {background-color: #F8EDE3}
+
+  ul {
+    display: table;
+    margin: 0 auto;
+  }
+
+.about-card {
+    background-color: #BDD2B6;
+}
+
+.about-card-header {
+    text-align: center;
+    color: #000000;
+    /* font-size: 18px;  */
+}
