@@ -25,11 +25,30 @@
   }
 
 .about-card {
-    background-color: #BDD2B6;
+    /* background-color: #BDD2B6; */
+    background-color: #F8EDE3;
 }
 
 .about-card-header {
     text-align: center;
     color: #000000;
     font-size: 20px; 
+}
+
+.full-page-image-bg {
+  /* The image used */
+  background-image: url("../Data/Images/cacao-farm.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
 }
