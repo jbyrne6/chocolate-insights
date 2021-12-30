@@ -36,8 +36,6 @@
     background-size: cover;
   }
 
-  .testing-navbar {
-      height: 100px;
-      width: 100%;
-      background-color: blue;
-  }
+  /* #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: white;
+} */

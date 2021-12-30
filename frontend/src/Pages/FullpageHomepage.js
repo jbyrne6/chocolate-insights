@@ -12,9 +12,12 @@ import {
   MDBCarouselElement,
   MDBCarouselCaption,
 } from 'mdb-react-ui-kit';
-import About from '../Pages/About.js'
+import Who from '../Pages/About/Who'
+import What from '../Pages/About/What'
+import Why from '../Pages/About/Why'
+import How from '../Pages/About/How'
 
-const anchors = ["Welcome", "About"];
+const anchors = ["Welcome", "Who", "What", "Why", "How"];
 
 const FullpageHomepage = () => (
   <ReactFullpage
@@ -22,8 +25,8 @@ const FullpageHomepage = () => (
     licenseKey = {'YOUR_KEY_HERE'}
     scrollingSpeed = {1000} /* Options here */
     anchors={anchors}
-    // navigation
-    sectionsColor={['', "#113227"]}
+    navigation
+    sectionsColor={['white', "#118ab2", "#06d6a0", "#ffd166", "#ef476f"]}
 
     render={({ state, fullpageApi }) => {
       return (
@@ -34,8 +37,17 @@ const FullpageHomepage = () => (
                 Click me to move down
               </button> */}
             </div>
-            <div className="section second-page">
-              <About />
+            <div className="section">
+              <Who />
+            </div>
+            <div className="section">
+              <What />
+            </div>
+            <div className="section">
+              <Why />
+            </div>
+            <div className="section">
+              <How />
             </div>
           </ReactFullpage.Wrapper>
         </div>
