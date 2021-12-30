@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactFullpage from '@fullpage/react-fullpage';
 import '../Styles/Homepage.css';
 import {
   MDBCard, 
@@ -8,7 +11,8 @@ import styled from 'styled-components'
 import Navbar from '../Components/Navbar.js'
 
 const PageBackground = styled.section`
-  background-color: #F8EDE3;
+  // background-color: #F8EDE3;
+  background-color: white;
   height: 100%;
 `;
 

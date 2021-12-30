@@ -1,0 +1,43 @@
+.full-page-image-bg {
+    /* The image used */
+    background-image: url("../Data/Images/cacao-farm.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .first-page {
+    /* The image used */
+    background-image: url("../Data/Images/cacao-farm.jpg");
+
+    /* Full height */
+    height: 100%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .second-page {
+    background-color: #113227;
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .testing-navbar {
+      height: 100px;
+      width: 100%;
+      background-color: blue;
+  }

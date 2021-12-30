@@ -11,3 +11,10 @@
   padding: 10px;
   background: #ccc;
 }
+
+#logo {
+  position: fixed;
+  z-index: 1;
+  color: black;
+  text-align: center;
+}
