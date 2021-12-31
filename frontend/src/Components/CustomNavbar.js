@@ -1,15 +1,6 @@
 import '../Styles/CustomNavbar.css'
 import styled from 'styled-components'
-import {
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-  MDBDropdownLink,
-  MDBNavbarItem,
-  MDBRow,
-  MDBCol
-} from 'mdb-react-ui-kit';
+import CustomDropdown from './CustomDropdown';
 
 const NavbarBackground = styled.div`
   position: fixed;
@@ -40,32 +31,20 @@ const MenuItem = styled.a`
   }
 `;
 
-function CustomNavbar() {
+const dropdownItems = [
+  {title:"Who", href:"Who"}, 
+  {title:"What", href:"What"}, 
+  {title:"Why", href:"Why"}, 
+  {title:"How", href:"How"}
+]
+
+const CustomNavbar = () => {
   return (
     <NavbarBackground>
       <Logo href="#Welcome">Chocolate Insights</Logo>
-      <MenuItem href="#Who">Who</MenuItem>
-      <MenuItem href="#What">What</MenuItem>
-      <MenuItem href="#Why">Why</MenuItem>
-      <MenuItem href="#How">How</MenuItem>
-      {/* <MDBNavbarItem>
-        <MDBDropdown>
-          <MDBDropdownToggle tag='a' className='nav-link'>
-            Dropdown
-          </MDBDropdownToggle>
-          <MDBDropdownMenu>
-            <MDBDropdownItem>
-              <MDBDropdownLink>Action</MDBDropdownLink>
-            </MDBDropdownItem>
-            <MDBDropdownItem>
-              <MDBDropdownLink>Another action</MDBDropdownLink>
-            </MDBDropdownItem>
-            <MDBDropdownItem>
-              <MDBDropdownLink>Something else here</MDBDropdownLink>
-            </MDBDropdownItem>
-          </MDBDropdownMenu>
-        </MDBDropdown>
-      </MDBNavbarItem> */}
+      <MenuItem>
+        <CustomDropdown dropdownTitle={"About"} dropdownItems={dropdownItems} />
+      </MenuItem>
     </NavbarBackground>
   );
 }

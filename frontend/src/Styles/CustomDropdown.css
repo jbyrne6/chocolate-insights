@@ -1,0 +1,98 @@
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    /* padding: 16px;
+    font-size: 16px; */
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: #f1f1f1; */
+    background-color: transparent;
+    min-width: 100px;
+    z-index: 1;
+    border-style: solid;
+
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      background-color: white;
+    }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content{
+      display: block;
+    }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+  .fade-in:hover {
+    animation-name: FadeIn;
+    animation-duration: 3s;
+    transition-timing-function: linear;
+  }
+  
+  @keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-moz-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-o-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-ms-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

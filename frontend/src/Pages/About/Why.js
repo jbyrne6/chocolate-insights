@@ -24,8 +24,8 @@ const UnList = styled.ul`
 
 const ListItem = styled.li`
   color: black;
-  margin-left: 15%;
-  margin-right: 15%;
+  // margin-left: 15%;
+  // margin-right: 15%;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 2vw;
