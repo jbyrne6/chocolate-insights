@@ -27,7 +27,7 @@ const Who = () => (
     <div>
       <PageTitle>Who</PageTitle>
       <PageContents>
-        We are dedicated team of chocolate enthusiasts seeking fuse our love of <b>craft chocolate</b> with our love of <b>technology and data</b>.
+        We are dedicated team of chocolate enthusiasts seeking to fuse our love of <b>craft chocolate</b> with our love of <b>technology and data</b>.
       </PageContents>
     </div>
 );

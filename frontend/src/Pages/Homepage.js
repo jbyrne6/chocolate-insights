@@ -85,7 +85,7 @@ function Homepage() {
           <MDBCard className="about-card">
             <MDBCardBody>
               <SectionContents>
-              We are dedicated team of chocolate enthusiasts seeking fuse our love of <b>craft chocolate</b> with our love of <b>technology and data</b>. 
+              We are dedicated team of chocolate enthusiasts seeking to fuse our love of <b>craft chocolate</b> with our love of <b>technology and data</b>. 
             </SectionContents>
             </MDBCardBody>
           </MDBCard>
@@ -98,7 +98,7 @@ function Homepage() {
             <MDBCardBody>
               <SectionContents>
                 <b>Chocolate Insights</b> is a service dedicated to enhancing the chocolate buying experience by <b>erasing the information barrier</b> between choco lovers and their bars.
-                Our service will allow <b>interactive visualizations</b> of bean to bar data to be presented to <b>customers' phones</b> while browsing in-store via <b>QR code</b> tehcnology.
+                Our service will allow <b>interactive visualizations</b> of bean to bar data to be presented to <b>customers' phones</b> while browsing in-store via <b>QR code</b> technology.
               </SectionContents>
             </MDBCardBody>
           </MDBCard>
