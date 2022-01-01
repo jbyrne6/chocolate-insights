@@ -17,7 +17,7 @@ import Why from '../Pages/About/Why'
 import How from '../Pages/About/How'
 
 const ScrollDownButton = styled.button`
-  background-color: #118ab2;
+  // background-color: #118ab2;
   text-align: center;
   border: 3px solid black;
 `;
@@ -50,17 +50,18 @@ const FullpageHomepage = () => (
     scrollingSpeed = {1000} /* Options here */
     anchors={anchors}
     navigation
-    sectionsColor={["#118ab2", "#06d6a0", "#ffd166", "#ef476f", "#9d4edd"]}
+    // sectionsColor={["#118ab2", "#06d6a0", "#ffd166", "#ef476f", "#9d4edd"]}
+    sectionsColor={["#007853", "#118ab2", "#9d4edd", "#ffd166", "#ef476f"]}
 
     render={({ state, fullpageApi }) => {
       return (
         <div>
           <ReactFullpage.Wrapper>  
             <div className="section active">
-              <Welcome />
               {/* <ScrollDownButton onClick={() => fullpageApi.moveSectionDown()}>
                 <h3>Click me to move down</h3>
               </ScrollDownButton> */}
+              <Welcome />
             </div>
             <div className="section">
               <Who />
